@@ -24,7 +24,7 @@ s=Utf8Encode(s);return binb2hex(core_sha256(str2binb(s),s.length*chrsz));}
 // register onclick events for Encrypt button 
 document.getElementById('cryptstr').onclick = function(){ 
  // gets data from input text & sets variables
- var email = document.getElementById('email').value;
+ var email = document.getElementById('strex').value;
  var baseURL = "https://dean-la.learnupon.com/sqsso?" 
  const timestamp = Math.floor(Date.now() / 1000);
  var secretKey = "592fe34b723b77d2221b4acbd1"
