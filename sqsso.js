@@ -34,7 +34,9 @@ document.getElementById('cryptstr').onclick = function(){
  var token = "USER=" + email + "&Time=" + timestamp + "&KEY=" + secretKey
  // encrypts data
  var SSOToken = SHA256(token); 
- var url = baseURL + "Email=" + email + "&Time=" + timestamp + "&SSOToken=" + SSOToken + "&FirstName=" + FirstName + "&LastName" + LastName + redirect
+ var url = baseURL + "Email=" + email + "&Time=" + timestamp + "&SSOToken=" + SSOToken + "&FirstName=" + FirstName + "&LastName=" + LastName + redirect
  document.getElementById('strcrypt').value = url; 
+ document.getElementById('lua').src = url; 
+ document.getElementById('strcrypt').style = "border-width: 0;"; 
  return false; 
 }
