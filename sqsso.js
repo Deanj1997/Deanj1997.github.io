@@ -20,7 +20,7 @@ function binb2hex(binarray){var hex_tab=hexcase?'0123456789ABCDEF':'0123456789ab
 hex_tab.charAt((binarray[i>>2]>>((3-i % 4)*8))&0xF);} 
 return str;} 
 s=Utf8Encode(s);return binb2hex(core_sha256(str2binb(s),s.length*chrsz));} 
- 
+
 // register onclick events for Encrypt button 
 document.getElementById('cryptstr').onclick = function(){ 
  // gets data from input text & sets variables
@@ -39,4 +39,5 @@ document.getElementById('cryptstr').onclick = function(){
  document.getElementById('lua').src = url; 
  document.getElementById('lua').style = "border-width: 0;"; 
  return false; 
+${{secrets.SQSSO}}
 }
