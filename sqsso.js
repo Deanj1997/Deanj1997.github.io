@@ -25,6 +25,8 @@ s=Utf8Encode(s);return binb2hex(core_sha256(str2binb(s),s.length*chrsz));}
 document.getElementById('cryptstr').onclick = function(){ 
  // gets data from input text & sets variables
  var email = document.getElementById('strex').value;
+ var FirstName = "Dean"
+ var LastName = "LU TEST"
  var baseURL = "https://dean-la.learnupon.com/sqsso?" 
  const timestamp = Math.floor(Date.now() / 1000);
  var secretKey = "592fe34b723b77d2221b4acbd1"
@@ -32,7 +34,7 @@ document.getElementById('cryptstr').onclick = function(){
  var token = "USER=" + email + "&Time=" + timestamp + "&KEY=" + secretKey
  // encrypts data
  var SSOToken = SHA256(token); 
- var url = baseURL + "Email=" + email + "&Time=" + timestamp + "&SSOToken=" + SSOToken + redirect
+ var url = baseURL + "Email=" + email + "&Time=" + timestamp + "&SSOToken=" + SSOToken + "&FirstName=" + FirstName + "&LastName" + LastName + redirect
  document.getElementById('strcrypt').value = url; 
  return false; 
 }
