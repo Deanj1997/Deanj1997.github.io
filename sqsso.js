@@ -39,5 +39,4 @@ document.getElementById('cryptstr').onclick = function(){
  document.getElementById('lua').src = url; 
  document.getElementById('lua').style = "border-width: 0;"; 
  return false; 
-${{secrets.SQSSO}}
 }
