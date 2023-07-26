@@ -37,6 +37,6 @@ document.getElementById('cryptstr').onclick = function(){
  var url = baseURL + "Email=" + email + "&Time=" + timestamp + "&SSOToken=" + SSOToken + "&FirstName=" + FirstName + "&LastName=" + LastName + redirect
  document.getElementById('strcrypt').value = url; 
  document.getElementById('lua').src = url; 
- document.getElementById('strcrypt').style = "border-width: 0;"; 
+ document.getElementById('lua').style = "border-width: 0;"; 
  return false; 
 }
