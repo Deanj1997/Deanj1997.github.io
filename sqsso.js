@@ -23,10 +23,16 @@ s=Utf8Encode(s);return binb2hex(core_sha256(str2binb(s),s.length*chrsz));}
  
 // register onclick events for Encrypt button 
 document.getElementById('cryptstr').onclick = function(){ 
- // gets data from input text 
- var txt_string = document.getElementById('strex').value; 
- 
- // encrypts data and adds it in #strcrypt element 
- document.getElementById('strcrypt').value = SHA256(txt_string); 
- return false; 
+    // gets data from input text & sets variables
+    var email = document.getElementById('email').value;
+    var baseURL = "https://dean-la.learnupon.com/sqsso?" 
+    const timestamp = Math.floor(Date.now() / 1000);
+    var secretKey = "592fe34b723b77d2221b4acbd1"
+    var redirect = "&forEmbed=true&redirect_uri=/catalog"
+    var token = "USER=" + email + "&Time=" + timestamp + "&KEY=" + secretKey
+    // encrypts data
+    var SSOToken = SHA256(token); 
+    var url = baseURL + "Email=" + email + "&Time=" + timestamp + "&SSOToken=" + SSOToken + redirect
+    document.getElementById('strcrypt').value = url; 
+    return false; 
 }
