@@ -26,7 +26,7 @@ document.getElementById('cryptstr').onclick = function(){
  // gets data from input text & sets variables
  var email = document.getElementById('strex').value;
  var FirstName = "Dean"
- var LastName = "LU TEST"
+ var LastName = "LUTEST"
  var baseURL = "https://dean-la.learnupon.com/sqsso?" 
  const timestamp = Math.floor(Date.now() / 1000);
  var secretKey = "592fe34b723b77d2221b4acbd1"
