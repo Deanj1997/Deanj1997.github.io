@@ -41,3 +41,8 @@ document.getElementById('cryptstr').onclick = function(){
     document.getElementById('lua').style = "border-width: 0;"; 
     return false; 
 }
+
+document.getElementById('fullscreenBtn').onclick = function(){
+    var elem = document.getElementById("lua");
+    elem.requestFullscreen();
+}
