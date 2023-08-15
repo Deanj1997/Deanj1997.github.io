@@ -1,3 +1,4 @@
+// Multiple functions all in charge of the SHA256 encoding
 function SHA256(s){var chrsz=8;var hexcase=0;function safe_add(x,y){var lsw=(x&0xFFFF)+(y&0xFFFF);var msw=(x>>16)+(y>>16)+(lsw>>16);return(msw<<16)|(lsw&0xFFFF);} 
 function S(X,n){return(X>>>n)|(X<<(32-n));} 
 function R(X,n){return(X>>>n);} 
@@ -21,22 +22,22 @@ hex_tab.charAt((binarray[i>>2]>>((3-i % 4)*8))&0xF);}
 return str;} 
 s=Utf8Encode(s);return binb2hex(core_sha256(str2binb(s),s.length*chrsz));} 
 
-// register onclick events for Encrypt button 
+// Register onclick events for Encrypt button 
 document.getElementById('cryptstr').onclick = function(){ 
- // gets data from input text & sets variables
- var email = document.getElementById('strex').value;
- var FirstName = "Dean"
- var LastName = "LUTEST"
- var baseURL = "https://dean-la.learnupon.com/sqsso?" 
- const timestamp = Math.floor(Date.now() / 1000);
- var secretKey = "592fe34b723b77d2221b4acbd1"
- var redirect = "&forEmbed=true&redirect_uri=/catalog"
- var token = "USER=" + email + "&Time=" + timestamp + "&KEY=" + secretKey
- // encrypts data
- var SSOToken = SHA256(token); 
- var url = baseURL + "Email=" + email + "&Time=" + timestamp + "&SSOToken=" + SSOToken + "&FirstName=" + FirstName + "&LastName=" + LastName + redirect
- document.getElementById('strcrypt').value = url; 
- document.getElementById('lua').src = url; 
- document.getElementById('lua').style = "border-width: 0;"; 
- return false; 
+    // gets data from input text & sets variables
+    var email = document.getElementById('strex').value;
+    var FirstName = "Dean"
+    var LastName = "LUTEST"
+    var baseURL = "https://dean-la.learnupon.com/sqsso?" 
+    const timestamp = Math.floor(Date.now() / 1000);
+    var secretKey = "592fe34b723b77d2221b4acbd1"
+    var redirect = "&forEmbed=true&redirect_uri=/catalog"
+    var token = "USER=" + email + "&Time=" + timestamp + "&KEY=" + secretKey
+    // encrypts data
+    var SSOToken = SHA256(token); 
+    var url = baseURL + "Email=" + email + "&Time=" + timestamp + "&SSOToken=" + SSOToken + "&FirstName=" + FirstName + "&LastName=" + LastName + redirect
+    document.getElementById('strcrypt').value = url; 
+    document.getElementById('lua').src = url; 
+    document.getElementById('lua').style = "border-width: 0;"; 
+    return false; 
 }
