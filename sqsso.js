@@ -36,7 +36,6 @@ document.getElementById('cryptstr').onclick = function(){
     // encrypts data
     var SSOToken = SHA256(token); 
     var url = baseURL + "Email=" + email + "&Time=" + timestamp + "&SSOToken=" + SSOToken + "&FirstName=" + FirstName + "&LastName=" + LastName + redirect
-    document.getElementById('strcrypt').value = url; 
     document.getElementById('lua').src = url; 
     document.getElementById('lua').style = "border-width: 0;"; 
     document.getElementById('fullscreenBtn').style = "visibility: show;"; 
