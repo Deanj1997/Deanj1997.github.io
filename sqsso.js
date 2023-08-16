@@ -39,6 +39,7 @@ document.getElementById('cryptstr').onclick = function(){
     document.getElementById('strcrypt').value = url; 
     document.getElementById('lua').src = url; 
     document.getElementById('lua').style = "border-width: 0;"; 
+    document.getElementById('fullscreenBtn').style = "border-width: 0;"; 
     return false; 
 }
 
