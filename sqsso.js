@@ -31,7 +31,7 @@ document.getElementById('cryptstr').onclick = function(){
     var baseURL = "https://dean-la.learnupon.com/sqsso?" 
     const timestamp = Math.floor(Date.now() / 1000);
     var secretKey = "592fe34b723b77d2221b4acbd1"
-    var redirect = "&forEmbed=true/catalog"
+    var redirect = "&forEmbed=true&redirect_uri=/catalog"
     var token = "USER=" + email + "&Time=" + timestamp + "&KEY=" + secretKey
     // encrypts data
     var SSOToken = SHA256(token); 
