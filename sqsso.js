@@ -51,4 +51,5 @@ document.getElementById('fullscreenBtn').onclick = function(){
 document.getElementById('closesessionBtn').onclick = function(){
     var elem = document.getElementById("lua");
     document.getElementById('lua').src = 'https://dean-la.learnupon.com/users/sign_out';
+    document.getElementById('lua').style = "visibility: hidden;"; 
 }
