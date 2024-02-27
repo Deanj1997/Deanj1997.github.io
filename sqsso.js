@@ -39,10 +39,16 @@ document.getElementById('cryptstr').onclick = function(){
     document.getElementById('lua').src = url; 
     document.getElementById('lua').style = "border-width: 0;"; 
     document.getElementById('fullscreenBtn').style = "visibility: show;"; 
+    document.getElementById('closesessionBtn').style = "visibility: show;"; 
     return false; 
 }
 
 document.getElementById('fullscreenBtn').onclick = function(){
     var elem = document.getElementById("lua");
     elem.requestFullscreen();
+}
+
+document.getElementById('closesessionBtn').onclick = function(){
+    var elem = document.getElementById("lua");
+    document.getElementById('lua').src = 'https://dean-la.learnupon.com/users/sign_out';
 }
